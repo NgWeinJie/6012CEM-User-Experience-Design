@@ -1,0 +1,362 @@
+/* General container styling */
+.booking-container {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* Doctor Info Section */
+.booking-doctor-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-doctor-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* Doctor Details */
+.booking-doctor-details h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.booking-doctor-details p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.booking-rating {
+  color: #f39c12;
+}
+
+/* Main Content */
+.booking-main {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Steps Section */
+.booking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Step Container for Two Columns */
+.booking-step-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure it wraps if there's not enough space */
+}
+
+/* Step Styling */
+.booking-step {
+  background-color: #e7f0fb;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Step Title */
+.booking-step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Calendar Styling */
+.react-calendar {
+  border: none;
+}
+
+/* Time Slots Section */
+.booking-time-slots {
+  margin-top: 20px;
+}
+
+.booking-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Slot Button Styles */
+.booking-slot-button {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #0E5FBE; /* Set the text color */
+}
+
+/* Morning Slot Styles */
+.morning-slot {
+  background-color: #daf7e2; 
+  color:#40a578;
+}
+
+.morning-slot:hover {
+  background-color: #ccf3ed;
+}
+
+/* Afternoon Slot Styles */
+.afternoon-slot {
+  background-color: #00A3FF14; 
+}
+
+.afternoon-slot:hover {
+  background-color: #c8e4ff; 
+}
+
+/* Disabled slot styling */
+.booking-slot-button.disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  color: #888; /* Gray text for disabled button */
+  cursor: not-allowed; /* Change the cursor to show it's disabled */
+}
+
+.booking-slot-button.disabled:hover {
+  background-color: #ccc; /* No hover effect */
+}
+
+/* Selected state for both */
+.booking-slot-button.selected {
+  background-color: #2a77eb;
+  color: white;
+}
+
+/* Styling for Patient's Details Section */
+.booking-patient-details {
+  background-color: #e7f0fb; /* Light blue background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  margin-top: 20px;
+  color: #2a77eb; /* Text color matching the theme */
+}
+
+.booking-patient-details h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.booking-input-group,
+.booking-age-select,
+.booking-gender-select {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.booking-input-group label,
+.booking-age-select label,
+.booking-gender-select label {
+  font-size: 14px;
+  color: #333;
+}
+
+.booking-input-group input,
+.booking-age-select select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white !important; /* Make sure background stays white */
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.booking-input-group input:focus,
+.booking-age-select select:focus {
+  outline: none;
+  border-color: #2a77eb;
+  background-color: white !important; /* Override focus background */
+}
+
+/* Handle browser autofill background issue */
+.booking-input-group input:-webkit-autofill {
+  background-color: white !important;
+  color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s; /* Avoid color change */
+  -webkit-text-fill-color: #333 !important; /* Ensure text color is consistent */
+  box-shadow: 0 0 0px 1000px white inset !important; /* Remove autofill shadow */
+}
+
+.booking-input-group input:-moz-autofill {
+  background-color: white !important;
+  color: #333 !important;
+  box-shadow: 0 0 0px 1000px white inset !important; /* Fix for autofill in Firefox */
+}
+
+/* Age select container styles */
+.age-select-container {
+  display: flex;
+  gap: 10px;
+}
+
+.age-select-container select {
+  width: 100%;
+  max-width: 900px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  appearance: none;
+  background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjODg4IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMTVsLTctNyA3LTcgNyA3eiIvPjwvc3ZnPg==') no-repeat right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.age-select-container select:focus {
+  outline: none;
+  border-color: #2a77eb;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-between; /* Spreads the gender options evenly */
+  max-width: 300px; /* Limits the width for better alignment */
+}
+
+.booking-gender-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.booking-gender-select div {
+  display: flex;
+  gap: 10px;
+}
+
+.booking-gender-select input[type="radio"] {
+  margin-right: 5px;
+}
+
+.booking-appointment-button {
+  width: 100%;
+  background-color: #2a77eb;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.booking-appointment-button:hover {
+  background-color: #1a53c8;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  width: 100%; /* Make the input take full width of its container */
+  max-width: 1350px; /* Set a max-width to control the size */
+  padding-right: 30px; /* Space for the search icon */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 16px; /* Adjust size if necessary */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.modal-close-button {
+  margin-top: 20px;
+  background-color: #2a77eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-close-button:hover {
+  background-color: #1a53c8;
+}
+
+.like-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.like-icon {
+  font-size: 100px; /* Adjust the font size if the icon is based on font (like FontAwesome) */
+  color: #2a77eb;
+  margin-bottom: 10px; /* Adds space between the icon and the heading */
+}
+
+.like-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}

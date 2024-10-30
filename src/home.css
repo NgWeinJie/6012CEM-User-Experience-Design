@@ -1,0 +1,187 @@
+/* Home.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fb;
+}
+
+/* Header */
+.app-header {
+  background-color: #246bfc;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* Adjusted to space-between for even distribution */
+  align-items: center;
+  max-width: 1200px; /* Limit the max width for better alignment */
+  margin: 0 auto; /* Center the nav bar in the header */
+  padding: 0 20px; /* Add side padding */
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px; /* Added padding for clickable area */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.nav-bar a,
+.category-card {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for nav links */
+.nav-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+/* Welcome Section */
+.welcome-section {
+  padding: 30px 20px;
+  text-align: left; /* Changed to left-align */
+}
+
+.welcome-section h1 {
+  margin: 0;
+  font-size: 2.75rem;
+  color: #333;
+}
+
+.welcome-section h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Categories Section */
+.categories {
+  margin: 40px 20px;
+  text-align: left; /* Align the category title to the left */
+}
+
+.categories h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.category-buttons {
+  display: flex; /* Use flexbox to align buttons in a row */
+  gap: 20px; /* Adjust the gap between buttons */
+  margin-top: 20px;
+}
+
+.category-card {
+  padding: 15px; /* Adjusted padding */
+  border-radius: 5px; /* Keep it rectangular */
+  flex: 1; /* Make buttons flexible to fill the row */
+  min-width: 180px; /* Minimum width for the cards */
+  text-align: center; /* Center the text */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Added display flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Specific background colors for each category */
+.category-card.doctors {
+  background-color: #D9D9D9; /* Doctors Appointment color */
+}
+
+.category-card.contact {
+  background-color: #E4F8EB; /* Contact Us color */
+}
+
+.category-card.emergency {
+  background-color: #E4F8EB; /* Emergency color */
+}
+
+.category-content {
+  display: flex; /* Use flexbox for icon and text alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Ensures the content takes full width of the card */
+}
+
+.category-icon {
+  font-size: 2.5rem; /* Adjust the size of the icon */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.category-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0; /* Remove default margin for tighter spacing */
+}
+
+/* Medical Centers Section */
+.medical-centers {
+  margin: 40px 20px;
+  padding: 15px;
+}
+
+.medical-center-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.medical-center-header h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.see-all {
+  text-decoration: none;
+  color: #246bfc;
+  font-weight: bold;
+}
+
+.medical-center-card {
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.medical-center-image {
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.medical-center-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure even spacing in vertical direction */
+  height: 150px; /* Make it take full height of the card */
+}
+
+.medical-center-info h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.medical-center-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.category-icon-image {
+  width: 50px; /* Adjust the size of the icon image */
+  height: 50px; /* Ensure images are square */
+  margin-right: 10px; /* Space between image and text */
+}

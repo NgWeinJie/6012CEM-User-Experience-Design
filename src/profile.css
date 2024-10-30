@@ -1,0 +1,243 @@
+/* Main container */
+.profile-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Back button */
+.back-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Profile header section */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-specialty {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.profile-rating {
+  font-size: 18px;
+  color: #ffcc00;
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  font-size: 22px;
+  color: #ffcc00;
+}
+
+.rating-reviews {
+  font-size: 16px;
+  color: #777;
+  margin-left: 10px;
+}
+
+/* Tabs section */
+.profile-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  font-size: 18px;
+  padding: 10px 40px;
+  background-color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  color: #246bfc;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid #246bfc;
+  color: #246bfc;
+}
+
+/* Info boxes */
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.info-box {
+  text-align: center;
+  background-color: #f1f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-value {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}
+
+.info-label {
+  font-size: 16px;
+  color: #888;
+}
+
+/* About me section */
+.about-me-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.about-me-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-me-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Appointment button */
+.appointment-button {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #246bfc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-button:hover {
+  background-color: #1a53c8;
+}
+
+/* Reviews section styling */
+.reviews-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.reviews-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure space between cards */
+}
+
+.review-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%; /* 48% to ensure two cards fit in a row with some space */
+  margin-bottom: 20px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #246bfc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.review-author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author-details h4 {
+  margin: 0;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+}
+
+.review-star {
+  color: #ffcc00;
+  margin-right: 3px;
+}
+
+.review-text {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Filter section */
+.reviews-filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reviews-filter label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.reviews-filter select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}

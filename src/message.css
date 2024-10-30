@@ -1,0 +1,306 @@
+/* Main container for the message page */
+.message-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f5f7fb;
+}
+
+/* Header */
+.message-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.message-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.back-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #246bfc;
+}
+
+/* Adjusted search bar styling */
+.chat-search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Position relative for icon alignment */
+    padding-bottom: 20px;
+}
+
+.chat-search-bar input {
+    width: 100%;
+    padding: 12px 45px 12px 20px; /* Padding adjusted for icon space */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-button {
+    position: absolute;
+    right: 15px; /* Place search icon inside the input */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #888; /* Match the lighter gray color */
+}
+
+/* Main content container for the 2-column layout */
+.main-content {
+    display: flex;
+    gap: 20px; /* Space between the two columns */
+}
+
+/* Left side for Active Now and Messages */
+.active-messages-section {
+    flex: 1; /* Take up half the space */
+    max-width: 400px;
+}
+
+/* Active doctors */
+.active-doctors {
+    display: flex;
+    gap: 15px; /* Adjust this value for more or less space between doctors */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* This will ensure that if the screen is small, the doctors will wrap to the next line */
+}
+
+.doctor-avatar {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.doctor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #4caf50;
+    border-radius: 50%;
+}
+
+.doctor-avatar.active .status-dot {
+    background-color: #4caf50;
+}
+
+/* Messages grid as single column */
+.messages-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Ensure single column */
+    gap: 20px; /* Space between messages */
+}
+
+/* Message card */
+.message-card {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #fcfefe; /* Light background to match design */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Renamed class to avoid conflict */
+.message-card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Ensure left alignment */
+}
+
+.message-card-info h4 {
+    margin: 0 0 5px 0; /* Space below the doctor's name */
+    font-size: 16px;
+    color: #333;
+}
+
+.message-card-info p {
+    margin: 0; /* Remove default top margin */
+    color: #777;
+    font-size: 14px;
+}
+
+.message-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+    color: #777;
+}
+
+.unread-count {
+    background-color: #246bfc;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Right side background for Elister logo */
+.right-panel {
+    flex: 1; /* Take up remaining space */
+    background-color: #c8e4ff; /* Matches the desired background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chat container for dialog */
+.chat-container {
+    display: flex;
+    flex-direction: column; /* Ensures flexbox column layout */
+    background-color: #e7f3ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 630px; 
+    width: 740px;
+}
+
+/* Chat header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.chat-header h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.chat-icons button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Chat messages section */
+.chat-messages {
+    flex-grow: 1; /* Take up available space */
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+/* Chat message */
+.message {
+    padding: 12px 16px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+    display: flex; /* Use flex to align items properly */
+    position: relative;
+    max-width: 80%; /* Controls the maximum width for long messages */
+    min-width: 50px; /* Ensures small messages still have a container */
+    word-wrap: break-word; /* Breaks long words for better readability */
+    clear: both; /* Ensures each message starts on its own row */
+}
+
+/* Align user messages to the right */
+.from-user {
+    background-color: #246bfc;
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+    border-radius: 18px 18px 0 18px;
+    margin-left: auto; /* Align the message to the right */
+    word-wrap: break-word; /* Breaks long words */
+    float: right; /* Ensures that this message is on the right */
+}
+
+.from-user .message-info {
+    color: white; 
+}
+
+.from-user .message-time {
+    color: white;
+}
+
+/* Align doctor messages to the left */
+.from-doctor {
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    align-self: flex-start;
+    border-radius: 18px 18px 18px 0;
+    word-wrap: break-word; /* Breaks long words */
+    float: left; /* Ensures that this message is on the left */
+}
+
+/* Specific styling for chat message info */
+.from-doctor .message-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #777;
+}
+
+.tick {
+    margin-left: 8px;
+}
+
+.tick:before {
+    content: "✔";
+}
+
+.tick.double:before {
+    content: "✔✔";
+}
+
+/* Chat input section */
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    margin-top: auto; /* Sticks the input to the bottom */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.send-button {
+    background-color: #246bfc;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
